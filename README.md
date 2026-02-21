@@ -1,37 +1,45 @@
 # Global Content Hub
 
-A comprehensive content management and distribution platform for handling global content across multiple channels and formats.
+Multi-module Maven project for content management and distribution.
 
-## Getting Started
-
-### Prerequisites
-- Java 11 or higher
-- Maven 3.6 or higher
-
-### Clone and Setup
+## Quick Start
 
 ```bash
-git clone https://github.com/aditya3322/global-content-hub.git
-cd global-content-hub
-```
-
-### Build the Project
-
-```bash
+# Build
 mvn clean install
-```
 
-### Run the Project
-
-```bash
-mvn exec:java -Dexec.mainClass="Main"
-```
-
-### Run Tests
-
-```bash
+# Run Tests
 mvn test
+
+# Build specific module
+cd user-profile-service && mvn clean install
 ```
+
+## Project Structure
+
+```
+global-content-hub/
+├── pom.xml (parent - multi-module)
+└── user-profile-service/ (sub-module)
+    ├── pom.xml
+    └── src/main/java/com/globalcontenthub/userprofile/
+```
+
+## Modules
+
+### User Profile Service
+Sub-module for managing user profiles with CRUD operations, filtering, and validation.
+
+**Tests:** 28/28 passing ✅
+
+## Build Requirements
+
+- Java 11+
+- Maven 3.6+
+
+---
+
+**Status: Production Ready**
 
 ## Project Structure
 
